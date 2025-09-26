@@ -1,3 +1,14 @@
+/*  
+    GRUPO
+    Giovanna Borges Coelho - RA 10756784
+    Melissa - RA
+
+    Descrição: Lê a string digitada pelo usuário e separa em tokens.
+
+    FONTES
+    1. https://stackoverflow.com/questions/43067869/lexical-analyser-in-java
+*/
+
 package src.Core;
 
 public class Lexer {

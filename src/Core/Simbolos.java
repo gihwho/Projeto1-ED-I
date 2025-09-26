@@ -1,3 +1,12 @@
+/*  
+    GRUPO
+    Giovanna Borges Coelho - RA 10756784
+    Melissa - RA
+
+    Descrição: Armazena valores numéricos para variáveis A..Z, permitindo
+    definir, consultar, listar e resetar.
+*/
+
 package src.Core;
 
 public class Simbolos {
