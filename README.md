@@ -4,7 +4,7 @@ Este repositório contém um projeto desenvolvido para a disciplina de **Estrutu
 
 Desenvolvido por:
 - Giovanna Borges Coelho
-- Melissa
+- Melissa Namie Shine
 
 ## Compilação/Execução
 
