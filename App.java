@@ -1,7 +1,7 @@
 /*  
     GRUPO
     Giovanna Borges Coelho - RA 10756784
-    Melissa - RA
+    Melissa Namie Shine - RA
 
     Descrição: Implementa o REPL (loop interativo) que interpreta
     os comandos (VARS, RESET, REC, STOP, PLAY, ERASE, EXIT)

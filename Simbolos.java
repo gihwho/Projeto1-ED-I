@@ -1,7 +1,7 @@
 /*  
     GRUPO
     Giovanna Borges Coelho - RA 10756784
-    Melissa - RA
+    Melissa Namie Shine - RA
 
     Descrição: Armazena valores numéricos para variáveis A..Z, permitindo
     definir, consultar, listar e resetar.
