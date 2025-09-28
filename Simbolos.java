@@ -7,8 +7,6 @@
     definir, consultar, listar e resetar.
 */
 
-package src.Core;
-
 public class Simbolos {
     float[] valores = new float[26];
     boolean[] def = new boolean[26];
@@ -22,12 +20,8 @@ public class Simbolos {
     //pega um char e converte numa posicao de array
     private int indiceLetra(char var) {
         char maiusc = Character.toUpperCase(var);
-
-        if (maiusc < 'A' || maiusc > 'Z') {
-                    return -1;
-                }
-
-        return (int) maiusc - 97;
+        if (maiusc < 'A' || maiusc > 'Z') return -1;
+        return (int) (maiusc - 'A');
     }
 
     public void set(char var, double valor) throws Exception {

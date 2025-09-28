@@ -9,8 +9,6 @@
     1. https://stackoverflow.com/questions/43067869/lexical-analyser-in-java
 */
 
-package src.Core;
-
 public class Lexer {
     public static final int VAR    = 1; //letra A a Z
     public static final int NUM    = 2; //número (double)
@@ -158,5 +156,12 @@ public class Lexer {
             if (seen[i]) usadasOut[m++] = (char)('A' + i);
         }
         return m;
+    }
+
+    public Tokens scan(String line) {
+        int cap = Math.max(32, line == null ? 0 : line.length() + 8);
+        Tokens t = new Tokens(cap);
+        tokenize(line == null ? "" : line, t);
+        return t;
     }
 }

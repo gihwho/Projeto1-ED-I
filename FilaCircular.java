@@ -4,8 +4,6 @@
     Melissa - RA
 */
 
-package src.EstruturasDeDados;
-
 public class FilaCircular <T> {
     private static final int TAM_DEFAULT = 100;
     private int inicio, fim, qtde;

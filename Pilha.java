@@ -4,8 +4,6 @@
     Melissa - RA
 */
 
-package src.EstruturasDeDados;
-
 public class Pilha <T> {
     private static int TAM_DEFAULT = 100;
     private int topoPilha;

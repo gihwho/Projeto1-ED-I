@@ -8,7 +8,7 @@ Desenvolvido por:
 
 ## Compilação/Execução
 
-No terminal, dentro da pasta do projeto:
+No terminal, dentro da pasta do projeto "Proj1-ED-I":
 
 ```bash
 javac *.java -encoding utf8

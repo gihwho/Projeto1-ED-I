@@ -10,10 +10,6 @@
     2. https://www.guj.com.br/t/conversao-de-uma-expressao-de-infxa-para-posfixa/41945
 */
 
-package src.Core;
-
-import src.EstruturasDeDados.Pilha;
-
 public class InfixaToPosfixa {
 
         private static int precedencia(char op) {
