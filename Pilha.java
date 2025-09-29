@@ -4,6 +4,7 @@
     Melissa Namie Shine - RA 10401096
 */
 
+// Pilha Genérica
 public class Pilha <T> {
     private static int TAM_DEFAULT = 100;
     private int topoPilha;
@@ -14,10 +15,12 @@ public class Pilha <T> {
         this.topoPilha = -1;
     }
 
+    // Construtor padrão
     public Pilha() {
         this(TAM_DEFAULT);
     }
 
+    // Métodos
     public boolean isEmpty() {
         return this.topoPilha == -1;
     }
