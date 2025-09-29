@@ -12,6 +12,7 @@
 
 public class InfixaToPosfixa {
 
+    //Operações
         private static int precedencia(char op) {
         switch (op) {
             case '^':
@@ -30,6 +31,7 @@ public class InfixaToPosfixa {
         return op == '+' || op == '-' || op == '*' || op == '/' || op == '^';
     }
 
+    //Converter para infixa para posfixa tirando entre parenteses
     public static String converter(Lexer.Tokens tk) throws Exception {
         Pilha<Character> pilha = new Pilha<>(256);
         StringBuilder saida = new StringBuilder();
