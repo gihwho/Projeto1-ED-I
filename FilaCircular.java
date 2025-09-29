@@ -4,20 +4,24 @@
     Melissa Namie Shine - RA 10401096
 */
 
+// FIla Circular Genérica
 public class FilaCircular <T> {
     private static final int TAM_DEFAULT = 100;
     private int inicio, fim, qtde;
     private T e[];
 
+    // Construtores
     public FilaCircular(int tamanho) {
         this.inicio = this.fim = this.qtde = 0;
         e = (T[]) new Object[tamanho];
     }
 
+    // Construtor padrão
     public FilaCircular() {
         this(TAM_DEFAULT);
     }
 
+    // Métodos
     public boolean qIsEmpty() {
         return (qtde == 0);
     }
