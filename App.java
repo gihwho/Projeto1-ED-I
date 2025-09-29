@@ -14,13 +14,16 @@ import java.util.LinkedHashSet;
 import java.util.Locale;
 
 public class App {
+    //capacidade da gravação
     private static final int REC_CAP = 10;
 
+     //estado da aplicação
     private final Simbolos tabela = new Simbolos();
     private final Lexer lexer = new Lexer();
     private boolean gravando = false;
     private final FilaCircular<String> rec = new FilaCircular<>(REC_CAP);
 
+     //Inicio do programa
     public static void main(String[] args) {
         try {
             Locale.setDefault(Locale.US);
@@ -32,6 +35,7 @@ public class App {
         }
     }
 
+     // Loop REPL
     private void repl() throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in, StandardCharsets.UTF_8));
 
@@ -105,16 +109,19 @@ public class App {
         }
     }
 
+    // Inicia a gravação
     private void iniciarGravacao() {
         gravando = true;
         System.out.println("Iniciando gravação... (REC: " + rec.sizeElements() + "/" + REC_CAP + ")");
     }
 
+    // Para a gravação
     private void pararGravacao() {
         gravando = false;
         System.out.println("Encerrando gravação... (REC: " + rec.sizeElements() + "/" + REC_CAP + ")");
     }
 
+    // Mostra as variáveis definidos
     private void cmdVARS() {
         String lista = tabela.listAll();
         if (lista == null || lista.isEmpty()) {
@@ -124,6 +131,7 @@ public class App {
         }
     }
 
+    // Reproduz a gravação
     private void cmdPLAY() throws Exception {
         if (rec.qIsEmpty()) {
             System.out.println("Não há gravação para ser reproduzida.");
@@ -156,6 +164,7 @@ public class App {
         while (!tmp.qIsEmpty()) rec.enqueue(tmp.dequeue());
     }
 
+    //Tenta fazer atribuição
     private boolean tryAtribuicao(String line) {
         String s = line.trim();
         int eq = s.indexOf('=');
@@ -183,6 +192,7 @@ public class App {
         }
     }
 
+    //Tenta avaliar expressão
     private boolean tryExpressao(String line) {
         try {
             Lexer.Tokens tks = lexer.scan(line);
