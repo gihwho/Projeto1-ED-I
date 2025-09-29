@@ -7,10 +7,12 @@
     definir, consultar, listar e resetar.
 */
 
+//Simbolos
 public class Simbolos {
     float[] valores = new float[26];
     boolean[] def = new boolean[26];
 
+    // Construtor
     public Simbolos() {
         for (int i = 0; i < 26; i++) {
             def[i] = false;
@@ -24,6 +26,8 @@ public class Simbolos {
         return (int) (maiusc - 'A');
     }
 
+    // Define o valor de uma variável
+    
     public void set(char var, double valor) throws Exception {
         int indice = indiceLetra(var);
         if (indice != -1) {
@@ -34,6 +38,8 @@ public class Simbolos {
         }
     }
 
+    //Verifica se a variável foi definida
+    
     public boolean ehDefinido(char var) {
         int indice = indiceLetra(var);
         if (indice != -1) {
@@ -42,6 +48,8 @@ public class Simbolos {
         return false;
     }
 
+    // Retorna o valor de uma variável
+    
     public float get(char var) throws Exception {
         int indice = indiceLetra(var);
         if (indice != -1) {
@@ -55,12 +63,16 @@ public class Simbolos {
         }
     }
 
+    // Reseta todas as variaveis para indefinidos
+    
     public void reset() {
         for (int i = 0; i < 26; i++) {
             def[i] = false;
         }
     }
 
+    // Lista todas variáveis definidos e seus valores
+    
     public String listAll() {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 26; i++) {
@@ -72,6 +84,8 @@ public class Simbolos {
         return sb.toString();
     }
 
+    // Coleta as variáveis usadas que não foram definidas
+    
     public int collectMissing(char[] usadas, int usadasLen, char[] faltantesOut) {
         int faltantesLen = 0;
         boolean[] usadasFlags = new boolean[26];
