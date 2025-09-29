@@ -7,12 +7,14 @@
     aplicando os operadores na ordem.
 */
 
+ // Pilha Genérica PosfixaResult
 public class PosfixaResult {
     
     private static boolean isOperador(String t) {
         return t != null && t.length() == 1 && "+-*/^".indexOf(t.charAt(0)) >= 0;
     }
 
+    // Aplica o operadoe 'op' nos operandos 'a' e 'b'
     private static double aplica(char op, double b, double a) throws Exception {
         switch (op) {
             case '+': return a + b;
@@ -26,6 +28,7 @@ public class PosfixaResult {
         }
     }
 
+    // Avalia a expressão posfixa usando os valores fornecidos para as variáveis
     public static double avaliar(String posfixa, Simbolos tab) throws Exception {
         // Tokens devem estar separados por espaço, ex.: "A B C + * 2 /"
         Pilha<Double> pilha = new Pilha<>(256);
