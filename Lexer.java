@@ -9,6 +9,8 @@
     1. https://stackoverflow.com/questions/43067869/lexical-analyser-in-java
 */
 
+
+
 public class Lexer {
     public static final int VAR    = 1; //letra A a Z
     public static final int NUM    = 2; //número (double)
@@ -133,7 +135,7 @@ public class Lexer {
                 continue;
             }
 
-            throw new IllegalArgumentException("Erro: símbolo inválido '" + c + "' na posição " + i + ".");
+            throw new IllegalArgumentException("Erro: operador inválido.");
         }
     }
 
@@ -164,4 +166,5 @@ public class Lexer {
         tokenize(line == null ? "" : line, t);
         return t;
     }
+}
 }
